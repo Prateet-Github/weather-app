@@ -1,0 +1,11 @@
+import axios from "axios";
+
+const api = axios.create({
+  baseURL: import.meta.env.VITE_BACKEND_URL 
+});
+
+export const getWeather = async (city) => {
+  const res = await api.get(`/weather/${city}`);
+  console.log(res.data);
+  return res.data;
+};
