@@ -13,7 +13,7 @@ try {
     res.json(data);
 } catch (error) {
   console.error(error)
-  res.status(500).json('Some Error happened')
+  res.status(500).json('Some Error happened unexpectedly');
 }
 })
 
